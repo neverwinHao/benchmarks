@@ -106,6 +106,7 @@ def create_docker_workspace(
             server_image=agent_server_image,
             working_dir=working_dir,
             forward_env=forward_env or [],
+            cleanup_image=True,
         )
     else:
         if force_build:
@@ -117,6 +118,7 @@ def create_docker_workspace(
             working_dir=working_dir,
             target=build_target,
             forward_env=forward_env or [],
+            cleanup_image=True,
         )
 
 
